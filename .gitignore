@@ -1,0 +1,14 @@
+# Add files/folders to be ignored by Git
+
+# Files
+
+# File types
+*.orig
+php_errors.log
+web.config
+
+# Folders
+components/
+
+# IIS error logs
+application.log
