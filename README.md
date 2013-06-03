@@ -16,6 +16,12 @@ Requirements
 Getting up and running
 ----------------------
 
+### Download the components
+
+If you want to try the example, you will need to download the required components via bower.
+
+Find out how via [http://bower.io](http://bower.io)
+
 ### Download the script
 
 * [backbone.static.js](https://raw.github.com/garethadavies/backbone.static/master/src/backbone.static.js)
