@@ -23,7 +23,7 @@ Getting up and running
 
 ### Reference the script
 
-This script requires jQuery, Backbone and Underscore, so make sure you add it after those files.
+This script requires jQuery and Backbone, so make sure you add it after those files.
 
 ```js
 <script src="path/to/file/backbone.static.min.js"></script>
