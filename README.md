@@ -18,8 +18,8 @@ Getting up and running
 
 ### Download the script
 
-* [backbone.static.js](https://raw.github.com/garethadavies/backbone.static/master/backbone.static.js)
-* [backbone.static.min.js](https://raw.github.com/garethadavies/backbone.static/master/backbone.static.min.js)
+* [backbone.static.js](https://raw.github.com/garethadavies/backbone.static/master/src/backbone.static.js)
+* [backbone.static.min.js](https://raw.github.com/garethadavies/backbone.static/master/src/backbone.static.min.js)
 
 ### Reference the script
 
