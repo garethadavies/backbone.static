@@ -29,133 +29,35 @@ This script requires jQuery, Backbone and Underscore, so make sure you add it af
 <script src="path/to/file/backbone.static.min.js"></script>
 ```
 
-### Extend Crudder
-You can extend Crudder and define what you want to happen when the callbacks are fired.
+### Extend
+You can extend a static view and define the container element for the templates to be inserted into.
 
 ```js
-_.extend(Backbone.Crudder.prototype, {
+StaticView = Backbone.Static.extend({
 
-  beforeSend: function() {
-
-    // What you want to happen before send
-
-  },
-
-  onComplete: function() {
-
-    // What you want to happen on complete
-
-  },
-
-  onSuccess: function(options) {
-
-    // What you want to happen on success
-
-  },
-
-  onError: function(options) {
-
-    // What you want to happen on error
-
-  }
+  container: '#example'
 
 });
 ```
 
-### Initialise Crudder
-When you intialise static, you can state which of the callbacks you wish to be fired.
+### Create a static view
 
 ```js
-Backbone.Crudder.initialize({
+var MyStaticView = new StaticView({
 
-  beforeSendActivated: true,
-  onCompleteActivated: true,
-  onSuccessActivated: true,
-  onErrorActivated: true
+  staticTemplate: '#template-example'
 
-});
+});        
 ```
 
-### Example Fetch
+### Show the view
 
 ```js
-Backbone.Crudder.reading({
-
-  entity: this.collection,
-  errorMessage: 'Error accessing user data'
-
-}, function(options) {
-
-  // Callback function
-  // Do whatever you require to do here
-
-  // Has the request been successful?
-  if (options.success) {
-
-  }
-
-});
-```
-
-### Example Save
-
-```js
-Backbone.Crudder.creatingUpdating({
-
-  entity: this.model,
-  entityData: {
-
-    name: 'Gareth',
-    email: 'gareth@me.com'
-
-  },
-  wait: true, // Do we want to wait for a server response?
-  successMessage: 'The user has been saved',
-  errorMessage: 'Unable to save the user'
-
-}, function(options) {
-
-  // Callback function
-  // Do whatever you require to do here
-
-  // Has the request been successful?
-  if (options.success) {
-
-  }
-
-});
-```
-
-### Example Delete
-
-```js
-Backbone.Crudder.deleting({
-
-  entity: this.model,
-  wait: true, // Do we want to wait for a server response?
-  successMessage: 'The user has been removed',
-  errorMessage: 'Unable to remove the user'
-
-}, function(options) {
-
-  // Callback function
-  // Do whatever you require to do here
-
-  // Has the request beed successful?
-  if (options.success) {
-
-  }
-
-});
+MyStaticView.show();
 ```
 
 Changelog
 ---------
-
-### Version 0.2.0
-
-* Simplified the initialisation process
-* Refactored all the code
 
 ### Version 0.1.0
 
